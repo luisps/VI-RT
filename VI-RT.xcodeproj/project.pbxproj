@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6252217229BA2FC800F9CF56 /* ImagePPM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6252217029BA2FC800F9CF56 /* ImagePPM.cpp */; };
 		628E7ADD29885D3400DE02D2 /* scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 628E7ADB29885D3400DE02D2 /* scene.cpp */; };
 		629C945E298813610012DB2A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 629C945D298813610012DB2A /* main.cpp */; };
 		629CDC182992B3C300F5288E /* Phong.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 629CDC162992B3C300F5288E /* Phong.cpp */; };
@@ -34,6 +35,8 @@
 		6248ECDF29884CA7005A4B50 /* BRDF.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BRDF.hpp; sourceTree = "<group>"; };
 		6248ECE229884F0B005A4B50 /* primitive.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = primitive.hpp; sourceTree = "<group>"; };
 		6248ECE52988590B005A4B50 /* geometry.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = geometry.hpp; sourceTree = "<group>"; };
+		6252217029BA2FC800F9CF56 /* ImagePPM.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ImagePPM.cpp; sourceTree = "<group>"; };
+		6252217129BA2FC800F9CF56 /* ImagePPM.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ImagePPM.hpp; sourceTree = "<group>"; };
 		628E7ADB29885D3400DE02D2 /* scene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = scene.cpp; sourceTree = "<group>"; };
 		628E7ADC29885D3400DE02D2 /* scene.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = scene.hpp; sourceTree = "<group>"; };
 		6299230D29882E7D0005B81E /* vector.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = vector.hpp; sourceTree = "<group>"; };
@@ -194,6 +197,8 @@
 			isa = PBXGroup;
 			children = (
 				62E357372996589F0088F23B /* image.hpp */,
+				6252217029BA2FC800F9CF56 /* ImagePPM.cpp */,
+				6252217129BA2FC800F9CF56 /* ImagePPM.hpp */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -260,6 +265,7 @@
 				62A0C42629968B2100380036 /* perspective.cpp in Sources */,
 				629CDC182992B3C300F5288E /* Phong.cpp in Sources */,
 				62AEA7D02990169300CF3E1C /* mesh.cpp in Sources */,
+				6252217229BA2FC800F9CF56 /* ImagePPM.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
