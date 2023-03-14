@@ -8,7 +8,7 @@
 #include <iostream>
 #include "scene.hpp"
 #include "perspective.hpp"
-#include "renderer.hpp"
+#include "StandardRenderer.hpp"
 #include "ImagePPM.hpp"
 #include "AmbientShader.hpp"
 #include "AmbientLight.hpp"
@@ -51,7 +51,7 @@ int main(int argc, const char * argv[]) {
     RGB background(0.05, 0.05, 0.55);
     shd = new AmbientShader(&scene, background);
     // declare the renderer
-    Renderer myRender (cam, &scene, img, shd);
+    StandardRenderer myRender (cam, &scene, img, shd);
     // render
     myRender.Render();
 
