@@ -18,10 +18,10 @@
 #include "BRDF.hpp"
 
 class Scene {
-    std::vector <Primitive> prims;
-    std::vector <BRDF> BRDFs;
+    std::vector <Primitive *> prims;
+    std::vector <BRDF *> BRDFs;
 public:
-    std::vector <Light> lights;
+    std::vector <Light *> lights;
     int numPrimitives, numLights, numBRDFs;
 
     Scene (): numPrimitives(0), numLights(0), numBRDFs(0) {}

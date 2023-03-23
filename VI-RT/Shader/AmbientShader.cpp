@@ -27,9 +27,9 @@ RGB AmbientShader::shade(bool intersected, Intersection isect) {
         Point p_dummy;
         
         // is it an ambient light ?
-        if (!light_itr->isAmbient) continue;
+        if (!(*light_itr)->isAmbient) continue;
         
-        color += Ka * light_itr->L(p_dummy);
+        color += Ka * (*light_itr)->L(p_dummy);
     }
         
     return color;
