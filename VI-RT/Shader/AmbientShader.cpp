@@ -8,7 +8,7 @@
 #include "AmbientShader.hpp"
 #include "Phong.hpp"
 
-RGB AmbientShader::shade(bool intersected, Intersection isect) {
+RGB AmbientShader::shade(bool intersected, Intersection isect, int depth) {
     RGB color(0.,0.,0.);
     
     // if no intersection, return background

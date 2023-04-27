@@ -19,6 +19,10 @@ public:
     Vector wo;
     float depth;
     BRDF *f;
+    int pix_x, pix_y;
+    int FaceID;  // ID of the intersected face 
+    bool isLight;  // for intersections with light sources
+    RGB Le;         // for intersections with light sources
     
     
     Intersection() {}

@@ -28,7 +28,7 @@ void StandardRenderer::Render () {
             // trace ray (scene)
             // ...
             
-            // shade this intersection (shader)
+            // shade this intersection (shader) - remember: depth=0
             // ...
             
             // write the result into the image frame buffer (image)
