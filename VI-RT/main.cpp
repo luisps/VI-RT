@@ -13,12 +13,16 @@
 #include "AmbientShader.hpp"
 #include "AmbientLight.hpp"
 
+#include <time.h>
+
 int main(int argc, const char * argv[]) {
     Scene scene;
     Perspective *cam; // Camera
     ImagePPM *img;    // Image
     Shader *shd;
     bool success;
+    clock_t start, end;
+    double cpu_time_used;
     
     success = scene.Load("/Users/psantos/VI-RT/VI-RT/VI-RT/Scene/tinyobjloader/models/cornell_box.obj");
     
@@ -44,8 +48,10 @@ int main(int argc, const char * argv[]) {
     // Camera parameters
     const Point Eye ={0,0,0}, At={0,0,1};
     const Vector Up={0,1,0};
-    const float fovW = 3.14f/3.f, fovH = 3.14f/3.f;
-    cam = new Perspective(Eye, At, Up, W, H, fovW, fovH);
+    const float fovW = 60.f;
+    const float fovH = fovW * (float)H/(float)W;  // in degrees
+    const float fovWrad = fovW*3.14f/180.f, fovHrad = fovH*3.14f/180.f;    // to radians
+    cam = new Perspective(Eye, At, Up, W, H, fovWrad, fovHrad);
     
     // create the shader
     RGB background(0.05, 0.05, 0.55);
@@ -53,10 +59,15 @@ int main(int argc, const char * argv[]) {
     // declare the renderer
     StandardRenderer myRender (cam, &scene, img, shd);
     // render
+    start = clock();
     myRender.Render();
+    end = clock();
+    cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
 
     // save the image
     img->Save("MyImage.ppm");
+    
+    fprintf (stdout, "Rendering time = %.3lf secs\n\n", cpu_time_used);
     
     std::cout << "That's all, folks!" << std::endl;
     return 0;
