@@ -9,8 +9,10 @@
 #define BB_hpp
 
 #include "vector.hpp"
+#include "ray.hpp"
 
 typedef struct BB {
+public:
     Point min, max;
     void update (Point p) {
         if (p.X < min.X) min.X = p.X;
@@ -20,6 +22,16 @@ typedef struct BB {
         if (p.Z < min.Z) min.Z = p.Z;
         else if (p.Z > max.Z) max.Z = p.Z;
     }
+    /*
+     * I suggest you implement:
+     *  bool intersect (Ray r) { }
+     *
+     * based on PBRT's 3rd ed. book , sec 3.1.2, pags 125..128 + 214,217,221
+     *
+     * or https://doi.org/10.1007/978-1-4842-7185-8_2
+     *
+     */
+    bool intersect (Ray r) { return true; }
 } BB;
 
 #endif /* AABB_hpp */

@@ -8,6 +8,11 @@
 #include "mesh.hpp"
 
 // see pbrt book (3rd ed.), sec 3.6.2, pag 157
+//
+// Suggestion: use:
+// // https://en.wikipedia.org/wiki/M%C3%B6ller%E2%80%93Trumbore_intersection_algorithm
+// Moller Trumbore intersection algorithm
+
 bool Mesh::TriangleIntersect (Ray r, Face f, Intersection *isect) {
 
 
@@ -19,8 +24,7 @@ bool Mesh::intersect (Ray r, Intersection *isect) {
     Intersection min_isect, curr_isect;
     float min_depth=MAXFLOAT;
     // intersect the ray with the mesh BB
-    
-    if (!intersect) return false;
+    if (!bb.intersect(r)) return false;
     
     // If it intersects then loop through the faces
     intersect = false;
