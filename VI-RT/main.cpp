@@ -57,7 +57,8 @@ int main(int argc, const char * argv[]) {
     RGB background(0.05, 0.05, 0.55);
     shd = new AmbientShader(&scene, background);
     // declare the renderer
-    StandardRenderer myRender (cam, &scene, img, shd);
+    int spp=1;     // samples per pixel
+    StandardRenderer myRender (cam, &scene, img, shd, spp);
     // render
     start = clock();
     myRender.Render();
