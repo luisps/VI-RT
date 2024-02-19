@@ -48,7 +48,7 @@ RGB WhittedShader::shade(bool intersected, Intersection isect, int depth) {
     Phong *f = (Phong *)isect.f;
     
     // if there is a specular component sample it
-    if (!f->Ks.isZero() && depth<4) {
+    if (!f->Ks.isZero() && depth<3) {
         color += specularReflection (isect, f, depth+1);
     }
     
