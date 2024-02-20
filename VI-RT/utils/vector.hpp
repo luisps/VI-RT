@@ -48,7 +48,7 @@ public:
         return X*v2.X + Y*v2.Y + Z*v2.Z;
     }
     // from pbrt book (3rd ed.), sec 2.2.1, pag 65
-    Vector cross (Vector v2) {
+    Vector cross (Vector v2) const {
         double v1x = X, v1y = Y, v1z = Z;
         double v2x = v2.X, v2y = v2.Y, v2z = v2.Z;
         return Vector((v1y * v2z) - (v1z * v2y),
@@ -83,6 +83,7 @@ public:
             *v2 = Vector(0, Z, -Y) / sqrtf(Y * Y + Z * Z);
         *v3 = cross(*v2);
     }
+
     // returns a new vector, which is this vector rotated to the
     // reference system defined by Rx, Ry, Rz
     Vector Rotate (Vector Rx, Vector Ry, Vector Rz) {
@@ -93,6 +94,7 @@ public:
         vec.Z = X * Rx.Z + Y * Ry.Z + Z * Rz.Z;
         return vec;
     }
+
 };
 
 class Point {
@@ -106,6 +108,7 @@ public:
     Point operator +(const Point &p) const { return {X+p.X, Y+p.Y, Z+p.Z};}
     Point operator *(const float f) const { return {f*X, f*Y, f*Z};}
     Point operator *(const double f) const { return {(float)(f*X), (float)(f*Y), (float)(f*Z)};}
+    Point operator +(const Vector &v) const { return {X+v.X, Y+v.Y, Z+v.Z};}
     friend Point operator*(const float f, const Point& p) {
         return p*f;
     }

@@ -11,7 +11,12 @@
 #include "StandardRenderer.hpp"
 #include "ImagePPM.hpp"
 #include "AmbientShader.hpp"
+#include "WhittedShader.hpp"
+#include "DistributedShader.hpp"
+#include "PathTracerShader.hpp"
 #include "AmbientLight.hpp"
+#include "PointLight.hpp"
+#include "AreaLight.hpp"
 
 #include <time.h>
 

@@ -16,7 +16,9 @@ class Ray {
 public:
     Point o; // ray origin
     Vector dir; // ray direction
-    int x,y;  // pixel associated with this pixel
+    int FaceID;  // ID of the face where the origin lays in
+    Vector invDir;  // ray direction reciprocal for intersections
+    int pix_x, pix_y;
     Ray () {}
     Ray (Point o, Vector d): o(o),dir(d) {}
     ~Ray() {}
