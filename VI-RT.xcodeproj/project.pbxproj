@@ -12,7 +12,13 @@
 		629C945E298813610012DB2A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 629C945D298813610012DB2A /* main.cpp */; };
 		629CDC182992B3C300F5288E /* Phong.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 629CDC162992B3C300F5288E /* Phong.cpp */; };
 		62A0C42629968B2100380036 /* perspective.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62A0C42429968B2100380036 /* perspective.cpp */; };
+		62A34E7F2B85349B00945F8C /* triangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62A34E7E2B85349A00945F8C /* triangle.cpp */; };
+		62A34E822B85383300945F8C /* DistributedShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62A34E812B85383300945F8C /* DistributedShader.cpp */; };
+		62A34E852B85406700945F8C /* PathTracerShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62A34E842B85406700945F8C /* PathTracerShader.cpp */; };
 		62AEA7D02990169300CF3E1C /* mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62AEA7CE2990169300CF3E1C /* mesh.cpp */; };
+		62CE86E129E97FBB004C4052 /* WhittedShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62CE86DF29E97FBB004C4052 /* WhittedShader.cpp */; };
+		62E346C229C0AD0C00DF4863 /* AmbientShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62E346C029C0AD0C00DF4863 /* AmbientShader.cpp */; };
+		62E346C629C0AE2300DF4863 /* StandardRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62E346C529C0AE2300DF4863 /* StandardRenderer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,9 +55,25 @@
 		62A0C42429968B2100380036 /* perspective.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = perspective.cpp; sourceTree = "<group>"; };
 		62A0C42529968B2100380036 /* perspective.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = perspective.hpp; sourceTree = "<group>"; };
 		62A0C4292996904E00380036 /* renderer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = renderer.hpp; sourceTree = "<group>"; };
+		62A34E7C2B85338700945F8C /* AreaLight.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AreaLight.hpp; sourceTree = "<group>"; };
+		62A34E7D2B85349A00945F8C /* triangle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = triangle.hpp; sourceTree = "<group>"; };
+		62A34E7E2B85349A00945F8C /* triangle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = triangle.cpp; sourceTree = "<group>"; };
+		62A34E802B85383300945F8C /* DistributedShader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = DistributedShader.hpp; path = Shader/DistributedShader.hpp; sourceTree = "<group>"; };
+		62A34E812B85383300945F8C /* DistributedShader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DistributedShader.cpp; path = Shader/DistributedShader.cpp; sourceTree = "<group>"; };
+		62A34E832B85406700945F8C /* PathTracerShader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = PathTracerShader.hpp; path = Shader/PathTracerShader.hpp; sourceTree = "<group>"; };
+		62A34E842B85406700945F8C /* PathTracerShader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PathTracerShader.cpp; path = Shader/PathTracerShader.cpp; sourceTree = "<group>"; };
 		62AA7A4829898635009BE3D8 /* AccelStruct.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AccelStruct.hpp; sourceTree = "<group>"; };
 		62AEA7CE2990169300CF3E1C /* mesh.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = mesh.cpp; sourceTree = "<group>"; };
 		62AEA7CF2990169300CF3E1C /* mesh.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = mesh.hpp; sourceTree = "<group>"; };
+		62CE86DE29E96CE3004C4052 /* PointLight.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PointLight.hpp; sourceTree = "<group>"; };
+		62CE86DF29E97FBB004C4052 /* WhittedShader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WhittedShader.cpp; path = Shader/WhittedShader.cpp; sourceTree = "<group>"; };
+		62CE86E029E97FBB004C4052 /* WhittedShader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = WhittedShader.hpp; path = Shader/WhittedShader.hpp; sourceTree = "<group>"; };
+		62E346BF29C0AD0C00DF4863 /* shader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = shader.hpp; path = Shader/shader.hpp; sourceTree = "<group>"; };
+		62E346C029C0AD0C00DF4863 /* AmbientShader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AmbientShader.cpp; path = Shader/AmbientShader.cpp; sourceTree = "<group>"; };
+		62E346C129C0AD0C00DF4863 /* AmbientShader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = AmbientShader.hpp; path = Shader/AmbientShader.hpp; sourceTree = "<group>"; };
+		62E346C429C0AE2300DF4863 /* StandardRenderer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = StandardRenderer.hpp; sourceTree = "<group>"; };
+		62E346C529C0AE2300DF4863 /* StandardRenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StandardRenderer.cpp; sourceTree = "<group>"; };
+		62E346C729C0AEEB00DF4863 /* AmbientLight.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AmbientLight.hpp; sourceTree = "<group>"; };
 		62E35733299657C30088F23B /* camera.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = camera.hpp; sourceTree = "<group>"; };
 		62E357372996589F0088F23B /* image.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = image.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,6 +92,8 @@
 		6248ECCE29884680005A4B50 /* Geometry */ = {
 			isa = PBXGroup;
 			children = (
+				62A34E7E2B85349A00945F8C /* triangle.cpp */,
+				62A34E7D2B85349A00945F8C /* triangle.hpp */,
 				6248ECE52988590B005A4B50 /* geometry.hpp */,
 				62AEA7CE2990169300CF3E1C /* mesh.cpp */,
 				62AEA7CF2990169300CF3E1C /* mesh.hpp */,
@@ -129,6 +153,9 @@
 		629B289E298E662A008482E0 /* Light */ = {
 			isa = PBXGroup;
 			children = (
+				62A34E7C2B85338700945F8C /* AreaLight.hpp */,
+				62CE86DE29E96CE3004C4052 /* PointLight.hpp */,
+				62E346C729C0AEEB00DF4863 /* AmbientLight.hpp */,
 				629B28A0298E664C008482E0 /* light.hpp */,
 			);
 			path = Light;
@@ -153,6 +180,7 @@
 		629C945C298813610012DB2A /* VI-RT */ = {
 			isa = PBXGroup;
 			children = (
+				62E346BE29C0ACF800DF4863 /* Shader */,
 				62A0C4272996903300380036 /* Renderer */,
 				62E357352996588C0088F23B /* Image */,
 				62E35731299657AE0088F23B /* Camera */,
@@ -170,6 +198,8 @@
 		62A0C4272996903300380036 /* Renderer */ = {
 			isa = PBXGroup;
 			children = (
+				62E346C529C0AE2300DF4863 /* StandardRenderer.cpp */,
+				62E346C429C0AE2300DF4863 /* StandardRenderer.hpp */,
 				62A0C4292996904E00380036 /* renderer.hpp */,
 			);
 			path = Renderer;
@@ -181,6 +211,22 @@
 				62AA7A4829898635009BE3D8 /* AccelStruct.hpp */,
 			);
 			path = 3DSortingStruct;
+			sourceTree = "<group>";
+		};
+		62E346BE29C0ACF800DF4863 /* Shader */ = {
+			isa = PBXGroup;
+			children = (
+				62A34E842B85406700945F8C /* PathTracerShader.cpp */,
+				62A34E832B85406700945F8C /* PathTracerShader.hpp */,
+				62A34E812B85383300945F8C /* DistributedShader.cpp */,
+				62A34E802B85383300945F8C /* DistributedShader.hpp */,
+				62CE86DF29E97FBB004C4052 /* WhittedShader.cpp */,
+				62CE86E029E97FBB004C4052 /* WhittedShader.hpp */,
+				62E346C029C0AD0C00DF4863 /* AmbientShader.cpp */,
+				62E346C129C0AD0C00DF4863 /* AmbientShader.hpp */,
+				62E346BF29C0AD0C00DF4863 /* shader.hpp */,
+			);
+			name = Shader;
 			sourceTree = "<group>";
 		};
 		62E35731299657AE0088F23B /* Camera */ = {
@@ -261,10 +307,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				628E7ADD29885D3400DE02D2 /* scene.cpp in Sources */,
+				62A34E822B85383300945F8C /* DistributedShader.cpp in Sources */,
 				629C945E298813610012DB2A /* main.cpp in Sources */,
+				62CE86E129E97FBB004C4052 /* WhittedShader.cpp in Sources */,
+				62A34E7F2B85349B00945F8C /* triangle.cpp in Sources */,
 				62A0C42629968B2100380036 /* perspective.cpp in Sources */,
 				629CDC182992B3C300F5288E /* Phong.cpp in Sources */,
+				62E346C229C0AD0C00DF4863 /* AmbientShader.cpp in Sources */,
+				62E346C629C0AE2300DF4863 /* StandardRenderer.cpp in Sources */,
 				62AEA7D02990169300CF3E1C /* mesh.cpp in Sources */,
+				62A34E852B85406700945F8C /* PathTracerShader.cpp in Sources */,
 				6252217229BA2FC800F9CF56 /* ImagePPM.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
