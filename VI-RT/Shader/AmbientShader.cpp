@@ -15,6 +15,11 @@ RGB AmbientShader::shade(bool intersected, Intersection isect, int depth) {
     if (!intersected) {
         return (background);
     }
+    if (isect.isLight) { // intersection with a light source
+        return isect.Le;
+    }
+    
+
     
     // verify whether the intersected object has an ambient component
     Phong *f = (Phong *)isect.f;
